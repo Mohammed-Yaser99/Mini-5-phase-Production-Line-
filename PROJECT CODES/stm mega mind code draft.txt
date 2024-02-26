@@ -1,0 +1,51 @@
+
+
+  uint32_t  counter;
+	   uint8_t var;
+		HAL_TIM_IC_Start_IT(&htim1,TIM_CHANNEL_1);
+		
+		
+		i2cBuf[0]= 1 ;
+		
+		HAL_I2C_Master_Transmit(&hi2c1, SLAVE1, i2cBuf, 1, 10);
+		HAL_Delay(1000);
+			HAL_I2C_Master_Transmit(&hi2c1, SLAVE1, i2cBuf, 0, 10);
+		HAL_Delay(1000);
+
+void HAL_I2C_EV_IRQHandler(I2C_HandleTypeDef *hi2c)
+{
+	switch (var)
+	{
+		case 'a': break;
+		case 'b': break;
+		case 'c': break;
+		case 'd': break;
+		case 'e': break;
+		case 'f': break;
+		case 'g': break;
+		case 'h': break;
+		case 'i': break;
+		case 'j': break;
+		case 'k': break;
+		case 'l': break;
+		case 'm': break;
+		case 'n': break;
+	}	
+}	
+
+ #define  IR1                           a
+		#define  IR2                           b
+		#define  underSuction                  c
+		#define  partRed                       d
+		#define  partGreen                     e
+		#define  pistonDrill_1_End             f
+		#define  pistonDrill_2_End             g
+		#define  RackGreenPushEnd              h
+		#define  RackGreenPushEndShelfUp       i
+		#define  RackRedPushEnd                j
+		#define  RackRedPushEndShelfUp         k
+		#define  TIMER_CH_1_Overflow           l
+		#define  TIMER_CH_2_Overflow           m
+		#define  TIMER_CH_3_Overflow           n
+	  #define  TIMER_CH_4_Overflow           o
+	#define  SLAVE1                       0x8
